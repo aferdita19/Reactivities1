@@ -31,6 +31,8 @@ export default class ActivityStore{
         )
     }
 
+
+
     loadActivities = async () => {
         //qetu ka kod loading = true;
         this.setLoadingInitial(true);// ia shtova
@@ -186,5 +188,9 @@ export default class ActivityStore{
         }finally{
             runInAction(() => this.loading = false);
         }
+    }
+
+    clearSelectedActivity = () => {
+        this.selectedActivity = undefined;
     }
 }
